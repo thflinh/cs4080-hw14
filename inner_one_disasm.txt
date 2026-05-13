@@ -1,0 +1,21 @@
+﻿== m ==
+0000    2 OP_CONSTANT         0 '1'
+0002    | OP_POP
+0003    | OP_GET_LOCAL        0
+0005    | OP_INNER_INVOKE  (0 args)    2 '1.02361e-306'
+0008    | OP_POP
+0009    | OP_NIL
+0010    | OP_RETURN
+== <script> ==
+0000    1 OP_CLASS            0 'A'
+0002    | OP_DEFINE_GLOBAL    0 'A'
+0004    | OP_GET_GLOBAL       1 'A'
+0006    2 OP_CLOSURE          3 <fn m>
+0008    | OP_METHOD           2 'm'
+0010    3 OP_POP
+0011    4 OP_GET_GLOBAL       4 'A'
+0013    | OP_CALL             0
+0015    | OP_INVOKE        (0 args) cache 0    5 'm'
+0019    | OP_POP
+0020    5 OP_NIL
+0021    | OP_RETURN
